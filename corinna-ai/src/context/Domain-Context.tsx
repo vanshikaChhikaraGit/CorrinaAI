@@ -50,7 +50,7 @@ export const DomainProvider = ({ children }: { children: React.ReactNode }) => {
 export const useDomain = ()=>{
     const context = useContext(DomainContext)
     if(!context){
-        throw new Error("usedomain must be usd within a plan provider ")
+        throw new Error("usedomain must be used within a domain context provider ")
     }
     return context;
 }

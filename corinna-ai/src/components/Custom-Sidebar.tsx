@@ -65,6 +65,8 @@ const CustomSidebar = () => {
         <div className="m-0.5 border border-b-gray-200 shadow-lg" />
       </SidebarHeader>
       <SidebarContent>
+
+        {/* dashboard  */}
         <SidebarGroup>
           <SidebarGroupContent>
             <Link href={"/dashboard"}>
@@ -75,6 +77,8 @@ const CustomSidebar = () => {
             </Link>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {/* conversations  */}
         <SidebarGroup>
           <SidebarGroupContent>
             <Link href={"/conversations"}>
@@ -85,6 +89,8 @@ const CustomSidebar = () => {
             </Link>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {/* settings  */}
         <SidebarGroup>
           <SidebarGroupContent>
             <Link href={"/settings"}>
@@ -94,6 +100,8 @@ const CustomSidebar = () => {
             </Link>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {/* email marketing  */}
         <SidebarGroup>
           <SidebarGroupContent>
             <Link href={"/email-marketing"}>
@@ -104,12 +112,15 @@ const CustomSidebar = () => {
             </Link>
           </SidebarGroupContent>
         </SidebarGroup>
+
         <SidebarSeparator></SidebarSeparator>
-         {/* // a dialog which will appear when user clicks on the plus button
-         the content of dialog box will be the form element which will take domain name validate it and
-         use server actions to store in the db  */}
+
+         {/* add domains  */}
         <SidebarGroup>
           <SidebarGroupContent>
+            {/* // a dialog which will appear when user clicks on the plus button
+         the content of dialog box will be the form element which will take domain name validate it and
+         use server actions to store in the db  */}
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="outline" className="w-full">
@@ -123,9 +134,12 @@ const CustomSidebar = () => {
             </Dialog>
           </SidebarGroupContent>
         </SidebarGroup>
+
       </SidebarContent>
-      
+
       <SidebarSeparator></SidebarSeparator>
+
+      {/* user's domain  */}
       <SidebarGroup>
         <Button variant={"outline"}>Your Domains</Button>
   <SidebarGroupContent>
@@ -156,7 +170,9 @@ const CustomSidebar = () => {
       )}
     </ul>
   </SidebarGroupContent>
-</SidebarGroup>
+    </SidebarGroup>
+
+{/* signout and sidebar trigger */}
       <SidebarFooter>
         <div className="flex items-center">
           <LogOut />

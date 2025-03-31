@@ -17,7 +17,7 @@ model User {
    id String @id @default(uuid())
    email String @unique
    name String
-   type Role @default(OWNER)
+   type Role @default(customer)
    externalId String @unique
    createdAt DateTime @default(now())
    updatedAt DateTime @updatedAt
@@ -127,8 +127,8 @@ enum Plans {
 }
 
 enum Role {
-  OWNER
-  CUSTOMER
+  customer
+  assistant
 }
 
 

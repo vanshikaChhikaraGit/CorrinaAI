@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className="antialiased min-h-[calc(100vh-1px)] flex flex-col">
         <CustomSidebar />
         <DomainProvider>
         <PlanProvider>
